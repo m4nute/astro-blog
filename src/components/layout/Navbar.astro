@@ -1,0 +1,28 @@
+---
+import { FileText, Github, Home, Linkedin, Mail, Newspaper } from "lucide-react"
+---
+
+<nav
+  class="sticky top-2 px-3 mx-2 sm:mx-0 sm:px-4 text-xl py-1.5 backdrop-blur-md border rounded-xl border-gray-600 border-opacity-50 transition-all
+  flex justify-between bg-[#292929] mb-10">
+  <section class="flex gap-1.5 sm:gap-2 h-fit my-auto">
+    <a href="/" class="rounded-lg hover:bg-zinc-700 p-2 transition-colors duration-150"><Home strokeWidth={1.6} size={22} /></a>
+    <a href="/blog" class="rounded-lg hover:bg-zinc-700 p-2 transition-colors duration-150">
+      <Newspaper strokeWidth={1.6} size={22} />
+    </a>
+  </section>
+  <section class="flex gap-1.5 sm:gap-2 h-fit my-auto">
+    <a target="_blank" href="https://www.linkedin.com/in/manuelgudino/" class="rounded-lg m-2 transition-colors duration-150">
+      <Linkedin className="stroke-1 hover:stroke-[1.6] transition-all" size={22} />
+    </a>
+    <a target="_blank" href="https://github.com/m4nute" class="rounded-lg m-2 transition-colors duration-150">
+      <Github className="stroke-1 hover:stroke-[1.6] transition-all" size={22} />
+    </a>
+    <a target="_blank" href="mailto:mgudinocontacto@gmail.com?" class="rounded-lg m-2 transition-colors duration-150">
+      <Mail className="stroke-1 hover:stroke-[1.6] transition-all" size={22} />
+    </a>
+    <a href="/cv" target="_blank" class="rounded-lg m-2 transition-colors duration-150">
+      <FileText className="stroke-1 hover:stroke-[1.6] transition-all" size={22} />
+    </a>
+  </section>
+</nav>
