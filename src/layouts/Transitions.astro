@@ -1,10 +1,14 @@
 ---
 import { ViewTransitions } from "astro:transitions"
+import BaseHead from "../components/BaseHead.astro"
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts"
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
-    <title>My Homepage</title>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
     <ViewTransitions />
   </head>
   <body class="bg-[#1c1c1c] text-white max-w-2xl mx-auto min-h-screen">

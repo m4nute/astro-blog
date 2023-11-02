@@ -2,17 +2,23 @@
 import type { CollectionEntry } from "astro:content"
 import FormattedDate from "../components/FormattedDate.astro"
 import { ViewTransitions } from "astro:transitions"
+import BaseHead from "../components/BaseHead.astro"
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts"
+import Navbar from "../components/Navbar.astro"
 
 type Props = CollectionEntry<"blog">["data"]
 
 const { title, pubDate, updatedDate } = Astro.props
 ---
 
+<!doctype html>
 <html>
   <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-[#1c1c1c] text-white max-w-2xl mx-auto min-h-screen">
+    <Navbar />
     <article>
       <div class="prose">
         <div class="title">
