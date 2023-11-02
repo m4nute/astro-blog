@@ -18,3 +18,7 @@
   font-style: normal;
   font-display: swap;
 }
+
+.astro-route-announcer {
+  display: none !important;
+}
