@@ -2,9 +2,9 @@
 import type { CollectionEntry } from "astro:content"
 import FormattedDate from "../components/FormattedDate.astro"
 import { ViewTransitions } from "astro:transitions"
-import BaseHead from "../components/BaseHead.astro"
+import BaseHead from "../components/layout/BaseHead.astro"
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts"
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/layout/Navbar.astro"
 
 type Props = CollectionEntry<"blog">["data"]
 
