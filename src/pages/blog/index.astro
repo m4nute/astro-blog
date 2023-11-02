@@ -1,19 +1,16 @@
 ---
-import BaseHead from "../../components/BaseHead.astro"
-import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
 import { getCollection } from "astro:content"
 import FormattedDate from "../../components/FormattedDate.astro"
-import { ViewTransitions } from "astro:transitions"
 import Transitions from "../../layouts/Transitions.astro"
+import Navbar from "../../components/Navbar.astro"
 
 const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 ---
 
 <Transitions>
-  <Header />
   <main>
+    <Navbar />
     <section>
       <ul>
         {
