@@ -21,18 +21,11 @@ const { title, pubDate, updatedDate } = Astro.props
     <Navbar />
     <article>
       <div class="prose prose-invert">
-        <div class="title">
-          <div class="date">
+        <div>
+          <div>
             <FormattedDate date={pubDate} />
-            {
-              updatedDate && (
-                <div class="last-updated-on">
-                  Last updated on <FormattedDate date={updatedDate} />
-                </div>
-              )
-            }
           </div>
-          <h1>{title}</h1>
+          <h1 transition:name={`blog-${title}`}>{title}</h1>
           <hr />
         </div>
         <slot />
