@@ -1,0 +1,100 @@
+---
+title: Game Changing React Libraries
+description: Must-know React libraries for writing code faster and better
+pubDate: "Mar 13 2023"
+---
+
+After eight months of developing React apps, I've learned a lot. Today, I'll share my favorite tools for React development, so you don't have to discover them by yourself!
+
+# Generals
+
+- **Package Manager**
+
+There are 3 main options: _npm_, _yarn_ and _pnpm_. I use [pnpm](https://pnpm.io/es/) because it's 3 times faster that npm.
+
+- **React Frameworks**
+
+[Next.js](https://nextjs.org/docs) is my top pick for React frameworks. It offers insane optimizations out of the box and has automatic routing and built-in API.
+
+- **Animations**
+
+The classical animations library is Framer Motion, but it's far from perfect. You should probably try other libraries depending on the use case, like AutoAnimate
+
+- **Linter**
+
+You could use ESLint for making sure that your code follows a particular code style. I use the Airbnb & Typescript config.
+
+- **Deploy**
+
+For hosting your frontend, you can use Vercel, Netlify or Github Pages.
+For your backend, Vercel or Railway.
+
+For your databases, once again, Vercel. There are other options like MongoDB Atlas, PlanetScale, Railway...
+
+- **BaaS**
+
+For BaaS (Backend as a Service), Pocketbase and Supabase are standout options. They offer real-time functionality, authentication and query features through intuitive dashboards.
+
+# Build Tools
+
+- **Vite**
+
+You should probably be using [Vite](https://vitejs.dev/) by now, create-react-app is no longer a thing. Vite lets you pick a JS framework and whether to use TypeScript or not, right in the installation script.
+
+- **Next.js**
+
+I'd recommend using Next.js 13.4 with create-next-app. create-t3-app is another option but for specific use cases.
+
+# Routing
+
+- **wouter**
+
+Recently I discovered [wouter](https://github.com/molefrog/wouter). It's an amazing light-weight library, extremely easy to implement. It doesn't even need a wrapper. wouter is 8 times lighter than react-router.
+
+- **TanStack Router**
+
+Might be the next big thing. For now I wouldn't use it, since it's still in beta and the docs are incomplete.
+
+# Data Fetching
+
+- **TanStack Query**
+
+[TanStack Query](https://tanstack.com/query/latest), aka React-Query. This is probably the best library for React. It makes fetching, caching and updating server data really easy. You could probably replace useEffect for this, in most cases. Make sure to read and understand the docs as much as you can.
+
+- **SWR**
+
+This is a data fetching library supported by Vercel. Even though it's really good, I prefer TanStack Query.
+
+# State Managment
+
+- **React Context**
+
+I started with this one, it's pretty simple. Does the job for storing basic user info and the current theme (light/dark).
+
+- **Zustand**
+
+[Zustand](https://github.com/pmndrs/zustand) is as easy as React Context and extremely light-weight, just beautiful. Not the best for bigger and complex applications, I suppose. For those cases try Redux.
+
+# Styling
+
+- **UI Libraries**
+
+My favorite one is [Mantine](https://mantine.dev/pages/getting-started/), but you could give Chakra or MaterialUI a try. Nevertheless, I wouldn't recommend using an UI component library for all of your projects. The cleaner and less opinionanted way of styling is writing your own CSS.
+
+- **Tailwind CSS**
+
+I use Tailwind CSS for all my projects. Don't use it straight away tho, you should know CSS before moving to Tailwind. To complement it you could try [shadcn/ui](https://ui.shadcn.com/), RadixUI or HeadlessUI, just light-weight and unstyled components to help you develop Tailwind components.
+
+# Forms
+
+- **React Hook Form**
+
+This one is really good, almost a must. It's simple, flexible and saves you from having to create a state for each field, write errors and make a regex for the email. It does it all for you, and it's compatible with Zod for easier type validation.
+
+# Content
+
+If you're planning to start a blog like this one, consider using [Contentlayer](https://www.contentlayer.dev/) and MDX. In addition to it, install rehypePlugins like rehypePrettyCode (make prettier code blocks) or rehypeAutolinkHeadings (for automatically building the Sections menu at your top left).
+
+---
+
+That's it for now! I'll update this guide if I discover something new. Right now I'm learning testing. Once I have a clear understanding of the topic, I'll add that section to the article. Stay tuned for more!
