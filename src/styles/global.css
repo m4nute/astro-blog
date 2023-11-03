@@ -22,3 +22,7 @@
 .astro-route-announcer {
   display: none !important;
 }
+
+.text-balance {
+  text-wrap: balance;
+}
