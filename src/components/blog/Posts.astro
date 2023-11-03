@@ -1,7 +1,11 @@
 ---
-import { getCollection } from "astro:content"
+import type { CollectionEntry } from "astro:content"
 import FormattedDate from "../FormattedDate.astro"
-const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(0, 3)
+const { posts } = Astro.props
+
+interface Props {
+  posts: CollectionEntry<"blog">[]
+}
 ---
 
 <h4 class="underline underline-offset-4">Articles</h4>
@@ -15,7 +19,7 @@ const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueO
             <FormattedDate date={post.data.pubDate} />
           </p>
           <h3 class="pl-0.5">{post.data.title}</h3>
-          <p class="pl-0.5 text-sm" transition:name={`description-${post.data.title}`}>
+          <p class="pl-0.5 text-sm text-zinc-300" transition:name={`description-${post.data.title}`}>
             {post.data.description}
           </p>
         </a>
