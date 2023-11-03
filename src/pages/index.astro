@@ -1,41 +1,21 @@
 ---
-import Experience from "../components/work/Experience.jsx"
 import Navbar from "../components/layout/Navbar.astro"
 import Transitions from "../layouts/Transitions.astro"
+import MyWork from "../components/work/MyWork.astro"
 ---
 
 <Transitions>
   <Navbar />
-  <div class="px-2 prose prose-headings:m-0 prose-invert">
+  <div class="px-2 prose prose-headings:m-0 prose-p:m-0 prose-invert">
     <h2 class="pb-5">Manuel Gudiño</h2>
     <p>
       I'm a software developer focused on crafting <span class="font-bold">top-notch</span> fullstack applications from scratch. My passion for
       problem-solving and acquiring knowledge drives me to deliver tailored and <span class="font-bold">outstanding</span> projects.
     </p>
+    <hr class="border-zinc-700 mt-8 mb-8" />
     <br />
-    <h4 class="underline underline-offset-2">My Work</h4>
-    <Experience
-      date="2023"
-      role="Full Stack Developer"
-      company="JustProats"
-      items={[
-        "Designed a tailored shopify store completely from scratch to fit the company's needs",
-        "Improved website speed by over 60 points",
-        "Made the store customizable and automated through the Shopify CMS",
-      ]}
-      ,
-      tech={["Shopify", "React.js", "TypeScript", "Tailwind CSS"]}
-    />
-    <Experience
-      date="2023"
-      role="Full Stack Developer"
-      company="TalkingCart"
-      items={[
-        "Designed an intuitive and user friendly experience",
-        "Interacted with Amazon API to retrieve relevant products",
-        " Used OpenAI API to understand the user's input and pick recommendations",
-      ]}
-      tech={["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"]}
-    />
+    <MyWork />
+    <hr class="border-zinc-700 mt-0 mb-8" />
+    <br />
   </div>
 </Transitions>
