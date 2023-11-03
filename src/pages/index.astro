@@ -2,6 +2,7 @@
 import Navbar from "../components/layout/Navbar.astro"
 import Transitions from "../layouts/Transitions.astro"
 import MyWork from "../components/work/MyWork.astro"
+import LatestPosts from "../components/blog/LatestPosts.astro"
 ---
 
 <Transitions>
@@ -12,10 +13,9 @@ import MyWork from "../components/work/MyWork.astro"
       I'm a software developer focused on crafting <span class="font-bold">top-notch</span> fullstack applications from scratch. My passion for
       problem-solving and acquiring knowledge drives me to deliver tailored and <span class="font-bold">outstanding</span> projects.
     </p>
-    <hr class="border-zinc-700 mt-8 mb-8" />
-    <br />
+    <hr class="border-zinc-700 mt-8 mb-12" />
     <MyWork />
-    <hr class="border-zinc-700 mt-0 mb-8" />
-    <br />
+    <hr class="border-zinc-700 mt-0 mb-12" />
+    <LatestPosts />
   </div>
 </Transitions>
