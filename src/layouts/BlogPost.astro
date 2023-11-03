@@ -22,10 +22,10 @@ const { title, pubDate, description } = Astro.props
     <article>
       <div class="prose prose-invert prose-headings:m-0 prose-p:m-0">
         <div>
-          <div>
+          <div class="text-rose-300 bg-zinc-800 w-fit rounded-lg py-1 px-2">
             <FormattedDate date={pubDate} />
           </div>
-          <h1 transition:name={`blog-${title}`}>{title}</h1>
+          <h1 transition:name={`blog-${title}`} class="pt-3">{title}</h1>
           <p class="pt-2" transition:name={`description-${title}`}>{description}</p>
           <hr class="mt-5 mb-12 border-zinc-700" />
         </div>

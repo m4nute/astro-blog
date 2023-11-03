@@ -5,6 +5,8 @@ import MyWork from "../components/work/MyWork.astro"
 import LatestPosts from "../components/blog/Posts.astro"
 import { getCollection } from "astro:content"
 import Footer from "../components/layout/Footer.astro"
+import FormattedDate from "../components/FormattedDate.astro"
+import { cn } from "../utils"
 const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(0, 3)
 ---
 
@@ -19,7 +21,28 @@ const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueO
     <hr class="border-zinc-700 mt-8 mb-12" />
     <MyWork />
     <hr class="border-zinc-700 mt-0 mb-12" />
-    <LatestPosts posts={posts} />
+    <h4 class="underline underline-offset-4">Latest Articles</h4>
+
+    <ul class="list-none pl-0 mt-6 space-y-4">
+      {
+        posts.map((post, index) => (
+          <li id={post.data.title} class="pl-4 pr-2 hover:bg-zinc-900 transition-colors py-3 rounded-lg">
+            <a href={`/blog/${post.slug}/`} class="no-underline space-y-1">
+              <p
+                class={cn("text-sm px-1.5 py-0.5 w-fit rounded-lg bg-zinc-800", {
+                  "text-rose-300": index % 3 === 0,
+                  "text-fuchsia-500": index % 3 === 1,
+                  "text text-blue-300": index % 3 === 2,
+                })}>
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+              <h3 class="pl-0.5">{post.data.title}</h3>
+              <p class="pl-0.5 text-sm text-zinc-300">{post.data.description}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
   <Footer />
 </Transitions>
