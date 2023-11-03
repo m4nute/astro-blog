@@ -26,3 +26,7 @@
 .text-balance {
   text-wrap: balance;
 }
+
+:root {
+  scrollbar-gutter: stable;
+}
