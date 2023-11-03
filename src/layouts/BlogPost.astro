@@ -8,7 +8,7 @@ import Navbar from "../components/layout/Navbar.astro"
 
 type Props = CollectionEntry<"blog">["data"]
 
-const { title, pubDate, updatedDate } = Astro.props
+const { title, pubDate, description } = Astro.props
 ---
 
 <!doctype html>
@@ -20,13 +20,14 @@ const { title, pubDate, updatedDate } = Astro.props
   <body class="bg-[#1c1c1c] text-white max-w-2xl mx-auto min-h-screen">
     <Navbar />
     <article>
-      <div class="prose prose-invert">
+      <div class="prose prose-invert prose-headings:m-0 prose-p:m-0">
         <div>
           <div>
             <FormattedDate date={pubDate} />
           </div>
           <h1 transition:name={`blog-${title}`}>{title}</h1>
-          <hr />
+          <p class="pt-2" transition:name={`description-${title}`}>{description}</p>
+          <hr class="mt-5 mb-12 border-zinc-700" />
         </div>
         <slot />
       </div>

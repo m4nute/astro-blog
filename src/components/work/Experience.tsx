@@ -38,9 +38,13 @@ export default function Experience({
               key={item}
               className={cn("bg-white text-black rounded-xl px-2.5 text-sm py-0.5 font-bold", {
                 "bg-[#0ea5e9] text-white": item === "Tailwind CSS",
-                "bg-[#f99f1e] text-black": item.startsWith("React"),
+                "bg-[#ff9945] text-black": item.startsWith("React"),
+                "bg-[#b7ff30] text-black": item === "Shopify",
+                "bg-[#286cfe] text-white": item === "TypeScript",
+                "bg-black text-white": item === "Next.js",
+                "bg-[#31a17a] text-white": item === "OpenAI API",
               })}>
-              {item.startsWith("React")}
+              {item}
             </li>
           )
         })}
