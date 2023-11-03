@@ -1,9 +1,9 @@
 ---
 import Footer from "../../components/layout/Footer.astro"
 import { getCollection } from "astro:content"
-import FormattedDate from "../../components/FormattedDate.astro"
 import Transitions from "../../layouts/Transitions.astro"
 import Navbar from "../../components/layout/Navbar.astro"
+import Posts from "../../components/blog/Posts.astro"
 
 const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 ---
@@ -11,21 +11,8 @@ const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueO
 <Transitions>
   <main>
     <Navbar />
-    <section>
-      <ul>
-        {
-          posts.map((post) => (
-            <li id={post.id}>
-              <a href={`/blog/${post.slug}/`}>
-                <h4 class="title">{post.data.title}</h4>
-                <p class="date">
-                  <FormattedDate date={post.data.pubDate} />
-                </p>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+    <section class="prose prose-headings:m-0 prose-p:m-0 prose-invert">
+      <Posts posts={posts} />
     </section>
   </main>
   <Footer />
