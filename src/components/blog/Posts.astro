@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content"
-import { cn } from "../../utils";
+import { cn } from "../../utils"
+import FormattedDate from "../FormattedDate.astro"
 const { posts } = Astro.props
 
 interface Props {
@@ -16,11 +17,15 @@ interface Props {
       <li id={post.data.title} class="pl-4 pr-2 hover:bg-zinc-900 transition-colors py-3 rounded-lg" transition:name={`blog-${post.data.title}`}>
         <a href={`/blog/${post.slug}/`} class="no-underline space-y-1">
           <p
-                class={cn("text-sm px-1.5 py-0.5 w-fit rounded-lg bg-zinc-800", {
-                  "text-rose-300": index % 3 === 0,
-                  "text-fuchsia-500": index % 3 === 1,
-                  "text text-blue-300": index % 3 === 2,
-                })}>
+            class={cn("text-sm px-1.5 py-0.5 w-fit rounded-lg bg-zinc-800", {
+              "text-rose-300": index % 5 === 0,
+              "text-fuchsia-500": index % 5 === 1,
+              "text-blue-400": index % 5 === 2,
+              "t text-red-400": index % 5 === 3,
+              "t text-sky-500": index % 5 === 4,
+            })}>
+            <FormattedDate date={post.data.pubDate} />
+          </p>
           <h3 class="pl-0.5">{post.data.title}</h3>
           <p class="pl-0.5 text-sm text-zinc-300" transition:name={`description-${post.data.title}`}>
             {post.data.description}
