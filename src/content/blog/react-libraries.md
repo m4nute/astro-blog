@@ -6,7 +6,9 @@ pubDate: "Mar 13 2023"
 
 After eight months of developing React apps, I've learned a lot. Today, I'll share my favorite tools for React development, so you don't have to discover them by yourself!
 
-# Generals
+<br>
+
+## Generals
 
 - **Package Manager**
 
@@ -35,7 +37,7 @@ For your databases, once again, Vercel. There are other options like MongoDB Atl
 
 For BaaS (Backend as a Service), Pocketbase and Supabase are standout options. They offer real-time functionality, authentication and query features through intuitive dashboards.
 
-# Build Tools
+### Build Tools
 
 - **Vite**
 
@@ -45,7 +47,7 @@ You should probably be using [Vite](https://vitejs.dev/) by now, create-react-ap
 
 I'd recommend using Next.js 13.4 with create-next-app. create-t3-app is another option but for specific use cases.
 
-# Routing
+### Routing
 
 - **wouter**
 
@@ -55,7 +57,7 @@ Recently I discovered [wouter](https://github.com/molefrog/wouter). It's an amaz
 
 Might be the next big thing. For now I wouldn't use it, since it's still in beta and the docs are incomplete.
 
-# Data Fetching
+### Data Fetching
 
 - **TanStack Query**
 
@@ -65,7 +67,7 @@ Might be the next big thing. For now I wouldn't use it, since it's still in beta
 
 This is a data fetching library supported by Vercel. Even though it's really good, I prefer TanStack Query.
 
-# State Managment
+### State Managment
 
 - **React Context**
 
@@ -75,7 +77,7 @@ I started with this one, it's pretty simple. Does the job for storing basic user
 
 [Zustand](https://github.com/pmndrs/zustand) is as easy as React Context and extremely light-weight, just beautiful. Not the best for bigger and complex applications, I suppose. For those cases try Redux.
 
-# Styling
+### Styling
 
 - **UI Libraries**
 
@@ -85,16 +87,12 @@ My favorite one is [Mantine](https://mantine.dev/pages/getting-started/), but yo
 
 I use Tailwind CSS for all my projects. Don't use it straight away tho, you should know CSS before moving to Tailwind. To complement it you could try [shadcn/ui](https://ui.shadcn.com/), RadixUI or HeadlessUI, just light-weight and unstyled components to help you develop Tailwind components.
 
-# Forms
+### Forms
 
 - **React Hook Form**
 
 This one is really good, almost a must. It's simple, flexible and saves you from having to create a state for each field, write errors and make a regex for the email. It does it all for you, and it's compatible with Zod for easier type validation.
 
-# Content
+### Content
 
 If you're planning to start a blog like this one, consider using [Contentlayer](https://www.contentlayer.dev/) and MDX. In addition to it, install rehypePlugins like rehypePrettyCode (make prettier code blocks) or rehypeAutolinkHeadings (for automatically building the Sections menu at your top left).
-
----
-
-That's it for now! I'll update this guide if I discover something new. Right now I'm learning testing. Once I have a clear understanding of the topic, I'll add that section to the article. Stay tuned for more!

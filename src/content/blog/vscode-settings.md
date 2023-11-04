@@ -4,11 +4,9 @@ description: Full VSCode Configuration guide
 pubDate: "2023-05-11"
 ---
 
-Welcome! In this post, I'll share with you my entire _VSCode config_, from extensions, settings and more!
+## Extensions
 
-# Extensions
-
-## Fundamentals
+### Fundamentals
 
 - **One Dark Pro**: Best theme IMO, I use the darker version.
 
@@ -20,7 +18,7 @@ Welcome! In this post, I'll share with you my entire _VSCode config_, from exten
 
 - **vscode-icons**: Better and colorfull icons for all type of files.
 
-## Stack Related
+### Stack Related
 
 - **Tailwind CSS IntelliSense**: Autocomplete for Tailwind classes.
 
@@ -46,7 +44,9 @@ Welcome! In this post, I'll share with you my entire _VSCode config_, from exten
 
 - **React - Typescript snippets**: More React snippets.
 
-# Settings
+<br>
+
+## Settings
 
 To easily modify your settings, press Ctrl+Comma and click on the top right file icon to open **settings.json**.
 Once you're there, start including the settings you're interesed in.
@@ -67,7 +67,7 @@ Once you're there, start including the settings you're interesed in.
 
 - **Prettier**: This section is highly opinionated. I just hate short lines and semicolons...
 
-  ```json title="settings.json"
+  ```json
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.semi": false,
   "prettier.bracketSameLine": true,

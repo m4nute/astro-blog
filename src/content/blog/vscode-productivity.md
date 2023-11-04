@@ -4,13 +4,15 @@ description: Code faster with this snippets and shortcuts!
 pubDate: "2023-05-09"
 ---
 
-Before continuing with the snippets guide, make sure to install the extension "_ES7+ React Snippets_" and "_React - Typescript snippets_". There are also some other extensions that might be useful, check them out in my [Settings](/posts/vscode-settings) article.
+Before continuing with the snippets guide, make sure to install the extension "_ES7+ React Snippets_" and "_React - Typescript snippets_". There are also some other extensions that might be useful, check them out in my [Settings](/blog/vscode-settings) article.
 
-# Shortcuts
+<br>
+
+## Shortcuts
 
 Here's the list of all the shortcuts I use.
 
-## Folder Navigation
+### Folder Navigation
 
 - **Ctrl+Tab**: Change to last tab.
 
@@ -24,7 +26,7 @@ Here's the list of all the shortcuts I use.
 
 - **Ctrl+`**: Open/Close terminal.
 
-## Code Navigation
+### Code Navigation
 
 - **Ctrl+End**: Navigate to the bottom.
 
@@ -38,7 +40,7 @@ Here's the list of all the shortcuts I use.
 
 - **Ctrl+F2**: Select all match (based on selected text).
 
-## Code Manipulation
+### Code Manipulation
 
 - **Ctrl+X**: Cut line (delete/copy at the same time).
 
@@ -54,7 +56,9 @@ Here's the list of all the shortcuts I use.
 
 - **Alt+Click**: Add additional cursor.
 
-# Snippets
+<br>
+
+## Snippets
 
 I included the snippets extension above. Now, I'll mention the specific snippets I tend to use.
 
