@@ -6,30 +6,15 @@ import { getCollection } from "astro:content"
 import Footer from "../components/layout/Footer.astro"
 import FormattedDate from "../components/FormattedDate.astro"
 import { cn } from "../utils"
-import { Github, Linkedin, Twitter } from "lucide-react"
+import Intro from "../components/homepage/Intro.astro"
+import LatestProjects from "../components/projects/LatestProjects.astro"
 const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(0, 3)
 ---
 
 <Transitions>
   <Navbar />
   <div class="px-2 prose prose-headings:m-0 prose-p:m-0 prose-invert">
-    <h2 class="pb-5">Manuel Gudiño</h2>
-    <p>
-      I'm a software developer focused on crafting <span class="font-bold">top-notch</span> fullstack applications from scratch. My passion for
-      problem-solving and acquiring knowledge drives me to deliver tailored and <span class="font-bold">outstanding</span> projects.
-    </p>
-    <br />
-    <section class="flex gap-4">
-      <a href="https://twitter.com/manutedev" target="_blank">
-        <Twitter className="stroke-[1.4] hover:cursor-pointer text-cyan-300 hover:stroke-2 transition-all" />
-      </a>
-      <a href="https://www.linkedin.com/in/manuelgudino/" target="_blank">
-        <Linkedin className="stroke-[1.4] hover:cursor-pointer text-sky-500 hover:stroke-2 transition-all" />
-      </a>
-      <a target="_blank" href="https://github.com/m4nute">
-        <Github className="stroke-[1.4] hover:cursor-pointer text-violet-500 hover:stroke-2 transition-all" />
-      </a>
-    </section>
+    <Intro />
     <hr class="border-zinc-700 mt-8 mb-12" />
     <MyWork />
     <hr class="border-zinc-700 mt-0 mb-12" />
@@ -56,5 +41,7 @@ const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueO
       }
     </ul>
   </div>
+  <hr class="border-zinc-700 mt-4 mb-10" />
+  <LatestProjects />
   <Footer />
 </Transitions>
