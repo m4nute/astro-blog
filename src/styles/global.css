@@ -30,3 +30,24 @@
 :root {
   scrollbar-gutter: stable;
 }
+
+main {
+  min-height: calc(100vh - 85px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #444;
+}
+
+::-webkit-scrollbar-corner {
+  background: #333;
+}
