@@ -17,16 +17,16 @@ export default function Experience({
 }) {
   return (
     <section className="mt-6 pb-4">
-      <p>{date ?? Date.now()}</p>
+      <p className="text-orange-400">{date ?? Date.now()}</p>
       <h3>
-        {role} · {company}
+        {role} <span className="text-yellow-200">·</span> {company}
       </h3>
       <p className="text-balance pb-4">{description}</p>
       <ul className="list-none pl-0 mt-1">
         {items.map((item) => {
           return (
-            <li key={item} className="my-0.5">
-              <strong className="pr-1">•</strong> {item}
+            <li key={item} className="my-1">
+              <strong className="pr-1 text-purple-400">•</strong> {item}
             </li>
           )
         })}
