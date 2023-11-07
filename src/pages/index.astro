@@ -8,12 +8,18 @@ import FormattedDate from "../components/FormattedDate.astro"
 import { cn } from "../utils"
 import Intro from "../components/homepage/Intro.astro"
 import LatestProjects from "../components/projects/LatestProjects.astro"
-const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(0, 3)
+const posts = (await getCollection("blog"))
+  .sort((a, b) => {
+    const dateA: Date = new Date(a.data.pubDate)
+    const dateB: Date = new Date(b.data.pubDate)
+    return dateB.getTime() - dateA.getTime()
+  })
+  .slice(0, 3)
 ---
 
 <Transitions>
   <Navbar />
-  <div class="px-2 prose prose-headings:m-0 prose-p:m-0 prose-invert">
+  <div class="px-3 prose prose-headings:m-0 prose-p:m-0 prose-invert">
     <Intro />
     <hr class="border-zinc-700 mt-8 mb-12" />
     <MyWork />
@@ -39,8 +45,8 @@ const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueO
         ))
       }
     </ul>
+    <hr class="border-zinc-700 mt-4 mb-10" />
+    <LatestProjects />
+    <Footer />
   </div>
-  <hr class="border-zinc-700 mt-4 mb-10" />
-  <LatestProjects />
-  <Footer />
 </Transitions>
