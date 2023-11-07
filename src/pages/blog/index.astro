@@ -5,7 +5,11 @@ import Transitions from "../../layouts/Transitions.astro"
 import Navbar from "../../components/layout/Navbar.astro"
 import Posts from "../../components/blog/Posts.astro"
 
-const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+const posts = (await getCollection("blog")).sort((a, b) => {
+  const dateA: Date = new Date(a.data.pubDate)
+  const dateB: Date = new Date(b.data.pubDate)
+  return dateB.getTime() - dateA.getTime()
+})
 ---
 
 <Transitions>
