@@ -15,14 +15,6 @@ const projects = [
     repo: "https://github.com/m4nute/next-supa-chat",
   },
   {
-    project: "TopJobs",
-    description:
-      "Job search website that provides daily job offers from the UK to all its users. The platform contains over 650 job listings from hundreds of companies, and it is updated daily with new opportunities.",
-    date: "Nov 2022",
-    link: "https://topjobs.netlify.app/",
-    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
-  },
-  {
     project: "PedaStore",
     description:
       "An e-commerce website developed using Next.js, TypeScript, TailwindCSS, and NextAuth, with Google (OAuth 2.0) and regular credentials for auth.",
@@ -31,11 +23,19 @@ const projects = [
     badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
     repo: "https://github.com/m4nute/next-ecommerce",
   },
+  {
+    project: "TopJobs",
+    description:
+      "Job search website that provides daily job offers from the UK to all its users. The platform contains over 650 job listings from hundreds of companies, and it is updated daily with new opportunities.",
+    date: "Nov 2022",
+    link: "https://topjobs.netlify.app/",
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+  },
 ]
 ---
 
-<h4 class="underline px-2 font-bold underline-offset-4">{!all ? "Latest" : null} Projects</h4>
-<ul class="list-none px-2 mt-6 space-y-12">
+<h4 class="underline px-3 sm:px-2 font-bold underline-offset-4">{!all ? "Latest" : null} Projects</h4>
+<ul class="list-none pr-2 pl-4 mt-6 space-y-12">
   {
     projects.map((project, index) => {
       return (
