@@ -1,7 +1,67 @@
 ---
+import { ArrowUpRight } from "lucide-react"
+import { cn } from "../../utils"
 
+const { all } = Astro.props
+
+const projects = [
+  {
+    project: "Realtime Chat App",
+    description:
+      "Chat App similar to Telegram. Contains Google and credentials auth, private chat rooms, realtime messages and chat history updated.",
+    date: "May 2023",
+    link: "https://m4nute-chat.vercel.app/",
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+    repo: "https://github.com/m4nute/next-supa-chat",
+  },
+  {
+    project: "TopJobs",
+    description:
+      "Job search website that provides daily job offers from the UK to all its users. The platform contains over 650 job listings from hundreds of companies, and it is updated daily with new opportunities.",
+    date: "Nov 2022",
+    link: "https://topjobs.netlify.app/",
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+  },
+  {
+    project: "PedaStore",
+    description:
+      "An e-commerce website developed using Next.js, TypeScript, TailwindCSS, and NextAuth, with Google (OAuth 2.0) and regular credentials for auth.",
+    date: "Feb 2023",
+    link: "https://pedastore.vercel.app/",
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+    repo: "https://github.com/m4nute/next-ecommerce",
+  },
+]
 ---
 
-<h4 class="underline underline-offset-4">Latest Projects</h4>
-
-<ul class="list-none pl-0 mt-6 space-y-4"></ul>
+<h4 class="underline font-bold underline-offset-4">{!all ? "Latest" : null} Projects</h4>
+<ul class="list-none pl-0 mt-6 space-y-8">
+  {
+    projects.map((project, index) => {
+      return (
+        <li id={project.project} class="prose prose-invert prose-headings:m-0 prose-p:m-0 prose-a:m-0">
+          <p
+            class={cn("text-sm px-1.5 py-0.5 w-fit rounded-lg bg-zinc-800", {
+              "text- text-green-400": index % 3 === 0,
+              "text-purple-400": index % 3 === 1,
+              "text text-yellow-300": index % 3 === 2,
+            })}>
+            {project.date}
+          </p>
+          <h3 class="pt-1">{project.project}</h3>
+          <p class="text-sm">{project.description}</p>
+          <div class="flex mt-4 gap-4">
+            <a target="_blank" class="flex no-underline gap-0.5 hover:underline underline-offset-4" href={project.link}>
+              Live <ArrowUpRight size={12} />
+            </a>
+            {project.repo ? (
+              <a target="_blank" class="flex no-underline gap-0.5 hover:underline underline-offset-4" href={project.repo}>
+                Github <ArrowUpRight size={12} />
+              </a>
+            ) : null}
+          </div>
+        </li>
+      )
+    })
+  }
+</ul>
