@@ -31,7 +31,7 @@ export default function Experience({
           )
         })}
       </ul>
-      <ul className="flex list-none pl-0 pt-2 gap-2.5">
+      <ul className="flex list-none pl-0 pt-2 gap-2.5 flex-wrap">
         {tech.map((item) => {
           return (
             <li
