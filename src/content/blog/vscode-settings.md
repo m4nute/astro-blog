@@ -1,7 +1,7 @@
 ---
 title: My VSCode Settings
 description: Full VSCode Configuration guide
-pubDate: "2023-05-11"
+pubDate: "May 11 2023"
 ---
 
 ## Extensions

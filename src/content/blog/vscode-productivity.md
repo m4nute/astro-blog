@@ -1,7 +1,7 @@
 ---
 title: VSCode Productivity Setup
 description: Code faster with this snippets and shortcuts!
-pubDate: "2023-05-09"
+pubDate: "May 9 2023"
 ---
 
 Before continuing with the snippets guide, make sure to install the extension "_ES7+ React Snippets_" and "_React - Typescript snippets_". There are also some other extensions that might be useful, check them out in my [Settings](/blog/vscode-settings) article.
