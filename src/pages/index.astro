@@ -8,6 +8,8 @@ import FormattedDate from "../components/FormattedDate.astro"
 import { cn } from "../utils"
 import Intro from "../components/homepage/Intro.astro"
 import LatestProjects from "../components/projects/LatestProjects.astro"
+import Skills from "../components/homepage/Skills.astro"
+import Contact from "../components/homepage/Contact.astro"
 const posts = (await getCollection("blog"))
   .sort((a, b) => {
     const dateA: Date = new Date(a.data.pubDate)
@@ -47,6 +49,10 @@ const posts = (await getCollection("blog"))
     </ul>
     <hr class="border-zinc-700 mt-4 mb-10" />
     <LatestProjects />
+    <hr class="border-zinc-700 mt-4 mb-10" />
+    <Skills />
+    <hr class="border-zinc-700 mt-6 mb-10" />
+    <Contact />
     <Footer />
   </div>
 </Transitions>
