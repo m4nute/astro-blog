@@ -1,0 +1,38 @@
+---
+import { cn } from "../../utils"
+const badges = {
+  front: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shopify & Liquid", "Tanstack Query", "Astro", "SvelteKit"],
+  back: ["PostgreSQL", "MySQL", "Redis", "Node", "Rest APIs", "tRPC", "Drizzle", "Prisma", "Auth"],
+  other: ["Pixel Perfect Design", "OpenAI API", "Vector DBs (ChromaDB)", "Playwright", "Jest"],
+}
+---
+
+<div class="px-3 sm:px-2">
+  <h4 class="underline font-bold underline-offset-4">Skills</h4>
+  <h4 class="py-3 text-lime-400">• Front End:</h4>
+  <section class="flex gap-4 flex-wrap pl-4">
+    {
+      badges.front.map((badge, index) => {
+        return <span class={cn("text-xs px-2 py-0.5 rounded-lg bg-zinc-800 font-bold")}>{badge}</span>
+      })
+    }
+  </section>
+  <br />
+  <h4 class="py-3 text-orange-500">• Back End:</h4>
+  <section class="flex gap-4 flex-wrap pl-4">
+    {
+      badges.back.map((badge) => {
+        return <span class="text-xs px-2 py-0.5 rounded-lg bg-zinc-800 font-bold">{badge}</span>
+      })
+    }
+  </section>
+  <br />
+  <h4 class="py-3 text-cyan-400">• Other:</h4>
+  <section class="flex gap-4 flex-wrap pl-4">
+    {
+      badges.other.map((badge) => {
+        return <span class="text-xs px-2 py-0.5 rounded-lg bg-zinc-800 font-bold">{badge}</span>
+      })
+    }
+  </section>
+</div>
