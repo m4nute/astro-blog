@@ -11,7 +11,7 @@ const projects = [
       "Chat App similar to Telegram. Contains Google and credentials auth, private chat rooms, realtime messages and chat history updated.",
     date: "May 2023",
     link: "https://m4nute-chat.vercel.app/",
-    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "ReactQuery"],
     repo: "https://github.com/m4nute/next-supa-chat",
   },
   {
@@ -20,7 +20,7 @@ const projects = [
       "An e-commerce website developed using Next.js, TypeScript, TailwindCSS, and NextAuth, with Google (OAuth 2.0) and regular credentials for auth.",
     date: "Feb 2023",
     link: "https://pedastore.vercel.app/",
-    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "ReactQuery"],
     repo: "https://github.com/m4nute/next-ecommerce",
   },
   {
@@ -29,7 +29,7 @@ const projects = [
       "Job search website that provides daily job offers from the UK to all its users. The platform contains over 650 job listings from hundreds of companies, and it is updated daily with new opportunities.",
     date: "Nov 2022",
     link: "https://topjobs.netlify.app/",
-    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "React Query"],
+    badges: ["Next.js", "Tailwind CSS", "Supabase", "Zustand", "ReactQuery"],
   },
 ]
 ---
@@ -44,19 +44,24 @@ const projects = [
             class={cn("text-sm px-1.5 py-0.5 w-fit rounded-lg bg-zinc-800", {
               "text- text-green-400": index % 3 === 0,
               "text-purple-400": index % 3 === 1,
-              "text text-yellow-300": index % 3 === 2,
+              "text text-yellow-400": index % 3 === 2,
             })}>
             {project.date}
           </p>
           <h3 class="py-1">{project.project}</h3>
           <p class="text-sm">{project.description}</p>
+          <div class="flex mt-4 gap-4 pl-0.5 flex-wrap">
+            {project.badges.map((badge) => {
+              return <span class="text-xs px-2 py-0.5 rounded-lg bg-zinc-800 font-bold">{badge}</span>
+            })}
+          </div>
           <div class="flex mt-4 gap-6 pl-0.5">
             <a
               target="_blank"
               class={cn("flex no-underline gap-0.5 hover:underline underline-offset-4", {
                 "text-green-400": index % 3 === 0,
                 "text-purple-400": index % 3 === 1,
-                "text-yellow-300": index % 3 === 2,
+                "text-yellow-400": index % 3 === 2,
               })}
               href={project.link}>
               Live <ArrowUpRight size={12} />
