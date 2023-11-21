@@ -21,7 +21,7 @@ export default function Experience({
       <h3>
         {role} <span className="text-yellow-200">·</span> {company}
       </h3>
-      <p className="text-balance pb-4">{description}</p>
+      <p className="pb-4">{description}</p>
       <ul className="list-none pl-0 mt-1">
         {items.map((item) => {
           return (
